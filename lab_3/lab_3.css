@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4ec;
+    color: #5b3e19;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff4e5;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #5b3e19;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b58b56;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3e3b31;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b3e19;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    label {
+        display: none; /* Скрыть метки на мобильной версии */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"] {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    input[type="text"]:placeholder-shown,
+    input[type="email"]:placeholder-shown,
+    input[type="tel"]:placeholder-shown,
+    input[type="number"]:placeholder-shown,
+    input[type="date"]:placeholder-shown {
+        border: 1px solid #d8d8d8; /* Легкая граница когда это поле пустое */
+    }
+}
