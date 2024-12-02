@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; /* Небесно-голубой фон */
+}
+
+.windmill {
+    position: relative;
+    width: 200px;   /* Ширина мельницы */
+    height: 250px;  /* Высота мельницы */
+}
+
+/* Основание (трапеция) */
+.base {
+    position: absolute;
+    bottom: -80px; /* Положение относительно низа */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px; /* Ширина основания */
+    height: 220px; /* Высота основания */
+    background-color: #8B4513; /* Коричневый цвет */
+    clip-path: polygon(0 100%, 100% 100%, 80% 0, 20% 0); /* Трапеция */
+}
+
+/* Верхушка (треугольник) */
+.roof {
+    position: absolute;
+    bottom: 140px; /* Положение относительно основания */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; /* Ширина для треугольника */
+    height: 0; /* Высота для треугольника */
+    border-left: 60px solid transparent; /* Левый треугольник */
+    border-right: 60px solid transparent; /* Правый треугольник */
+    border-bottom: 60px solid #442603; /* Цвет верхушки */
+}
+
+/* Окна (квадраты) */
+.window {
+    position: absolute;
+    width: 30px; /* Ширина окна */
+    height: 30px; /* Высота окна */
+    background-color: #FFFFFF; /* Цвет окон */
+    border: 2px solid #000; /* Граница окон */
+}
+
+.window.left {
+    bottom: 50px; /* Положение первого окна */
+    left: 42%; /* Положение относительно мельницы */
+}
+
+.window.right {
+    bottom: -50px; /* Положение второго окна */
+    right: 42%; /* Положение относительно мельницы */
+}
+
+/* Лопасти (круг и трапеции) */
+.blade {
+    position: absolute;
+    width: 20px; /* Ширина лопасти */
+    height: 100px; /* Высота лопасти */
+    background-color: #c19b34; /* Цвет лопастей */
+    transform-origin: bottom; /* Точка вращения */
+    left: 50%;
+    top: -50px; /* Положение лопастей */
+    transform: translateX(-50%);
+}
+
+/* Центр (круг) */
+.circle {
+    position: absolute;
+    width: 40px; /* Диаметр круга */
+    height: 40px; /* Диаметр круга */
+    background-color: #c19b34; /* Цвет центра */
+    border-radius: 50%; /* Круглая форма */
+    top: 30px; /* Положение круга */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blade1 {
+    transform: translateX(-50%) rotate(45deg); /* Положение первой лопасти */
+}
+
+.blade2 {
+    transform: translateX(-50%) rotate(135deg); /* Положение второй лопасти */
+}
+
+.blade3 {
+    transform: translateX(-50%) rotate(225deg); /* Положение третьей лопасти */
+}
+
+.blade4 {
+    transform: translateX(-50%) rotate(315deg); /* Положение четвёртой лопасти */
+}
