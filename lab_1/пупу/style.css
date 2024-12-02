@@ -1,0 +1,155 @@
+.zagolovok {
+    text-align: center;
+    font-size: 24pt;   
+    font-family: BebasNeue;   
+}
+
+.podzagolovok {
+    text-align: center;
+    font-size: 18pt;
+    font-family: MartianMono;
+}
+.podzagolovok1 {
+    text-align: center;
+    font-size: 14pt;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.text {
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px;
+    line-break: auto;
+    hyphens: manual;
+    text-indent: 20px;
+}
+.text1 {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px;
+    line-break: auto;
+    hyphens: manual;
+    text-align-last: right;
+    text-indent: 20px;
+}
+ol {
+    list-style-type: cjk-ideographic;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px;
+}
+
+ul {
+    list-style: url(11.png);
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px;
+}
+
+#top {
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px
+}
+#pik {
+    list-style-type: lower-greek;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px
+}
+#ppp {
+    list-style-type: decimal;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px
+}
+#kkk {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    text-align: justify;
+    font-size: 14pt;
+    padding: 10px 100px
+}
+.pic {
+    float: right;
+    margin: 5px 0 5px 5px;
+}
+.pic1 {
+    float: left;
+    
+}
+.table {
+    border: 1px solid black;
+    width: 600px;
+    margin: auto;
+    background-color: lightcyan;
+    text-align:left;
+}
+@font-face {
+    font-family: BebasNeue;
+    src: url('BebasNeue-Regular.ttf');
+}
+@font-face {
+    font-family: MartianMono;
+    src: url('SofiaSansExtraCondensed-VariableFont_wght.ttf');
+}
+.a {
+    font-variant: small-caps;
+}
+.b {
+    font-style:oblique;
+}
+.c {
+    letter-spacing: 1px;
+}
+.d {
+    word-spacing: 3px;
+}
+.e {
+    border-style: dotted;
+    border-color: red;
+    border-width:thick;
+}
+img {
+    image-rendering: pixelated;
+    outline: 2px dashed #3d1f15; 
+    outline-offset: -10px; 
+}
+.line {
+    border-left: 4px solid #f66d52; 
+    padding: 10px; 
+    background: #efcec8; 
+    color: #fff; 
+}
+.z {
+    color: hotpink;
+}
+.f {
+    color: darkorange;
+}
+.i {
+    color: yellow;
+}
+.w {
+    color: navajowhite;
+}
+.r {
+    color: lightpink;
+}
+.s {
+    color:aqua;
+}
+.g {
+    color: green;
+}
+.center {
+    text-align:center;
+}

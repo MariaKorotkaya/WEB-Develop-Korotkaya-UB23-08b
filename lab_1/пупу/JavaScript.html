@@ -1,0 +1,319 @@
+<html>
+<head>
+    <title> JS </title>
+    <link rel=stylesheet type="text/css" href="style.css" />
+    <style>
+        body {
+            background-color: rgb(255, 173, 237);
+        }
+    </style>
+    <style>
+
+        table.t1 {
+            margin: 1em auto;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .t1 th, .t1 td {
+            padding: 4px 8px;
+        }
+
+        .t1 thead th {
+            background: #4f81bd;
+            text-transform: lowercase;
+            text-align: left;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .t1 tr {
+            border-right: 1px solid #95b3d7;
+        }
+
+        .t1 tbody tr {
+            border-bottom: 1px solid #95b3d7;
+        }
+
+            .t1 tbody tr:nth-child(odd) {
+                background: #dbe5f0;
+            }
+
+            .t1 tbody th, .t1 tbody tr:nth-child(even) td {
+                border-right: 1px solid #95b3d7;
+            }
+
+        .t1 tfoot th {
+            background: #4f81bd;
+            text-align: left;
+            font-weight: normal;
+            font-size: 10px;
+            color: #fff;
+        }
+
+        .t1 tr *:nth-child(3), .t1 tr *:nth-child(4) {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1 class='zagolovok'> JavaScript</h1>
+    <h2 class='podzagolovok'>Разделы</h2>
+    <ol>
+        <li><a href="#story">История создания</a></li>
+        <li><a href="#obzor">Краткий обзор языка</a></li>
+        <li><a href="#kod">Примеры кода</a></li>
+    </ol><br />
+    <a name="story">
+        <h2 class='podzagolovok'>История создания</h2>
+        <P class='text'>
+            <img src="javascript.jpg" width="200px" class="pic">
+            События, которые привели к появлению JavaScript, происходили в течение шести месяцев, с мая по декабрь 1995 года. Компания <a href="https://ru.wikipedia.org/wiki/Netscape_Communications">Netscape Communications</a> находилась на передовой в области веб-технологий. Их браузер Netscape Communicator успешно конкурировал с NCSA Mosaic, первым популярным веб-браузером. Основатели компании Netscape были также участниками разработки Mosaic в начале 90-х годов. Теперь, обладая финансовыми средствами и независимостью, у них были все возможности для поиска новых способов развития веб-технологий. Именно это стало толчком к появлению JavaScript.
+            <br /><br />
+        </P>
+        <p class="text1">
+            Брендан Айк, создатель <dfn>JavaScript</dfn>, должен был разработать для компании Netscape новый язык программирования под названием "Scheme для браузера". Scheme представляет собой динамичный и мощный диалект языка программирования Lisp с упрощенным синтаксисом. Интернету требовался язык, который был бы простым в освоении, динамичным, кратким и мощным, а Брендан Айк не упустил возможности поработать над таким проектом, присоединившись к команде разработчиков. Помимо этого, улучшилась скорость работы, и процесс установки программного обеспечения стал гораздо более простым.
+            <br /><br />
+            Команде было поставлено задание создать работающий прототип за кратчайшие сроки. В то время  <span class="c">Sun Microsystems</span> завершала разработку своего языка программирования Java, который изначально назывался Oak. Компания Netscape Communications уже готовилась заключить контракт с Sun Microsystems, чтобы сделать Java доступным в своем браузере. Так зачем же нужен был Mocha (первоначальное название JavaScript)? Почему было принято решение создать совершенно новый язык программирования, когда уже была готовая альтернатива? Дело в том, что Java не была адаптирована под целевую аудиторию, на которую был ориентирован Mocha - скриптеры, любители и дизайнеры. Java была слишком крупной и сложной, чтобы выполнять такие задачи. Основная идея заключалась в том, что Java предназначалась для крупных разработчиков и профессиональных программистов, тогда как Mocha должен был использоваться для более мелких скриптовых задач. Другими словами, Mocha должен был стать скриптовым компаньоном для Java, подобно тому, как взаимодействуют C/C++ и Visual Basic на платформе Windows.
+        </p><br />
+    </a>
+    <a name="obzor">
+        <h2 class='podzagolovok'>Краткий обзор языка</h2>
+        <P class='text'>
+            <span class="a">JavaScript</span> — avaScript - это язык программирования с динамической неявной типизацией, автоматическим управлением памятью и прототипным наследованием. 
+            JavaScript разделяется на три отдельные части:
+            <br />
+            <ol id="top">
+                <li> объектная модель браузера (Browser Object Model или BOM)</li>
+                <li>ядро (ECMAScript)</li>
+                <li>объектная модель документа (Document Object Model или DOM) </li>
+            </ol>
+        </P>
+        <h3 class='podzagolovok1'>Система типов</h3> <br />
+       <P class='text'>
+         Диаграмма типов JavaScript выглядит примерно так:
+           <ul>
+               <li>Number</li>
+               <li>Sring</li>
+               <li> <ins>Boolean</ins></li>
+               <li>Object</li>
+               <li>Null</li>
+               <li>Undefined</li>
+           </ul>
+<p class="text">
+           
+        </p>
+        <h3 class='podzagolovok1'>Недостатки JS:</h3>
+        <p class="text">
+            <img src="krid.jpg" alt="картика" width="300px" class="pic1"> 
+        </p>
+        <ol id="pik">
+            <li>Безпасность на стороне клиента</li>
+            <li>Недстаточны средства откладки </li>
+            <li>Разная интерпритация браузеров</li>
+            <li>JavaScript обрабатывает данные операнды с использованием 32-битных чисел, храня числа в форме 64-битных чисел с плавающей запятой. Это может привести к замедлению выполнения операций и увеличению времени загрузки скриптов.</li>
+            <li>Даже единственная ошибка в коде может привести к полной остановке отображения JavaScript на странице. Это может привести к впечатлению у пользователя, что JavaScript отключен, тогда как это не так.</li>
+        </ol>
+
+        <code>При правильном использовании этот язык может стать мощным инструментом для разработчика, но его применение также сопряжено с определенными рисками. Для предотвращения ошибок и проблем важно учитывать возможные трудности и принимать их во внимание при разработке проекта.</code><br /><br />
+        <p class="text">
+            Рассматривая цели и применение <i>JavaScript</i>, следует отметить, что на протяжении 21 века он получил широкое распространение. Он используется для разработки разнообразных приложений. Согласно результатам проведенных исследований, JavaScript активно применяется в следующих сферах:
+            <br />
+        </p>
+        <ol id="ppp">
+            <li> фронтенд-разработке;<br /></li>
+            <li>создании мобильного ПО;<br /></li>
+            <li>бэкенд-программировании;<br /></li>
+            <li>написании программного обеспечения десктопного типа.<br /></li>
+        </ol>
+        <p class="text">
+            <del>JavaScript наиболее востребован в сфере веб-разработки. Программист, использующий JS, способен создавать не только веб-приложения, но и небольшие игры, а также полноценные веб-сайты или одностраничные приложения. Важнейшие области практического применения JavaScript - это клиентская и серверная разработка.</del><br />
+        </p>
+        <h3 class='podzagolovok1'>Особенности изучения</h3><br />
+        <p class="text">
+            <span class="e">Язык JS</span> достаточно легко изучить.<kbd> Его удобство обосновывается:</kbd><br />
+         </p>
+        <ol id="kkk">
+            <li class="b">понятным даже новичкам синтаксисом;</li>
+            <li>высокой читаемостью кода;</li>
+            <li class="d">доступностью инструментов и фреймов</li>
+            <li>схожестью с английским языком</li>
+            <li>наличием в Сети огромного количества материалов для изучения </li>
+            
+        </ol>
+        <P class='line'>
+            <q>Прежде чем изучать JavaScript, важно освоить HTML и CSS, а также разобраться в основах верстки. Это позволит даже начинающему разработчику быстро приобрести опыт и обеспечит работой на протяжении ближайших 10-15 лет.</q><br />
+        </P>
+    </a>
+    <a name="kod">
+        <hr>  <h2 class='podzagolovok'>Примеры кода</h2><hr>
+        <P class='text'>
+            Строки – это последовательность символов в одинарных или двойных кавычках. Принципиальной разницы между ними нет.<br /><br />
+            <table class="table">
+                <tr>
+                    <td>
+                        <span class="r">'Одна строка'</span> <br />
+                        <span class="r">"Другая строка"</span><br />
+                        <span class="g">
+                            // кавычки внутри строк необходимо экранировать<br />
+                            // двойные, если строка в двойных кавычках
+                        </span><br />
+                        <span class="r">"Ресторан \"У конца вселенной\""</span><br />
+                        <span class="g"> // одинарные, если в одинарных</span><br />
+                        <span class="r">'I\'m Groot'</span><br />
+                        <span class="g">// строки могут содержать управляющие последовательности</span><br />
+                        <span class="r">   "Первая строка\Вторая строка"</span><br />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            Логические значения true и false используются в сравнениях, условиях и циклах. Все остальные типы данных могут быть приведены к логическому значению.<br /><br />
+            <table class="table">
+                <tr>
+                    <td>
+                        <span class="g">// приводятся к false в логическом контексте</span> <br /><br />
+                        <span class="i">
+                        0<br />
+                        -0<br />
+                        NaN<br />
+                        undefined<br />
+                        null<br /><br />
+                        </span>
+                        <span class="g">// остальные значения становятся tru</span><br />                       
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+           Стрелочные функции<br /><br />
+          
+           В ES6 появился новый тип функций, который привел к изменению структуры кода на JavaScript. Изначально они кажутся очень простыми.<br /><br />
+            <table class="table">
+                <tr>
+                    <td>
+
+                        <span class="z">const</span> foo1 = <span class="f">()</span> => <br />
+                        <span class="g">//...</span><br />
+                        }<br /><br />
+
+                        <span class="g">// можно даже в одну строку<br /></span>
+                        <span class="z">const</span> foo2 = <span class="f">()</span> => doSomething()<br /><br />
+
+                        <span class="g">// с передачей параметра<br /></span>
+                        <span class="z">const</span> foo3 = <span class="f">param</span>=> doSomething(param)<br /><br />
+
+
+                        <span class="g">// неявный возврат значения<br /></span>
+                        <span class="z">const</span> foo4 = <span class="f">param</span> => param * <span class="f">2</span><br />
+                        foo4(<span class="f">5</span>) <span class="g">// 10</span><br /><br />
+
+</td>
+                </tr>
+            </table>
+            <br /><br />
+            <p class="center">
+            <img src="123.jpg" align="middle" width="700px"><br /><br /><br />
+
+        </P>
+    </a>
+    <table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+        <caption>Типы данных JS</caption>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Тип данных</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th>1</th><td>Undefined (Неопределённый тип)</td><td>typeof instance === "undefined"</td></tr>
+            <tr><th>2</th><td>Boolean (Булев, Логический тип)</td><td>typeof instance === "boolean"</td></tr>
+            <tr><th>3</th><td>Number (Число)</td><td>typeof instance === "number"</td></tr>
+            <tr><th>4</th><td>String (Строка)</td><td>typeof instance === "string"</td></tr>
+            <tr><th>5</th><td>BigInt</td><td>typeof instance === "bigint"</td></tr>
+            <tr><th>6</th><td>Symbol (в ECMAScript 6)</td><td>typeof instance === "symbol"</td></tr>
+            <tr><th>7</th><td>Null (Null тип )</td><td>typeof instance === "object"</td></tr>
+            <tr><th>8</th><td>Object (Объект)</td><td>typeof instance === "object"</td></tr>
+        </tbody>
+    </table>
+    <p class="text">
+        Использованные теги:
+        <ol id="ppp">
+            <li>html</li>
+            <li>title</li>
+            <li>head</li>
+            <li>style</li>
+            <li>body</li>
+            <li>h1</li>
+            <li>h2</li>
+            <li>h3</li>
+            <li>ol</li>
+            <li>ul</li>
+            <li>li</li>
+            <li>a</li>
+            <li>p</li>
+            <li>br</li>
+            <li>img</li>
+            <li>table</li>
+            <li>tr</li>
+            <li>th</li>
+            <li>td</li>
+            <li>caption</li>
+            <li>thead</li>
+            <li>tbody</li>
+            <li>code</li>
+            <li>del</li>
+            <li>dfn</li>
+            <li>ins</li>
+            <li>q</li>
+            <li>kbd</li>
+            <li>i</li>
+            <li>hr</li>
+        </ol>
+        </p>
+    <p class="text">
+        Использованные css-свойства:
+        <ol id="ppp">
+            <li>text-align</li>
+            <li>font-size</li>
+            <li>text-decoration</li>
+            <li>font-family</li>
+            <li>padding</li>
+            <li>list-style-type</li>
+            <li>list-style-position</li>
+            <li>float</li>
+            <li>margin</li>
+            <li>border</li>
+            <li>width</li>
+            <li>margin</li>
+            <li>background-color</li>
+            <li>src</li>
+            <li>text-shadow</li>
+            <li>background</li>
+            <li>background-size</li>
+            <li>border-collapse</li>
+            <li>color</li>
+            <li>text-transform</li>
+            <li>border-right</li>
+            <li>border-bottom</li>
+            <li>font-weight</li>
+            <li>font-variant</li>
+            <li>font-style</li>
+            <li>image-rendering</li>
+            <li>line-break</li>
+            <li>hyphens</li>
+            <li>text-align-last</li>
+            <li>word-spacing</li>
+            <li>letter-spacing</li>
+            <li>text-indent</li>
+            <li>line-height</li>
+            <li>border-style</li>
+            <li>border-color</li>
+            <li>border-width</li>
+            <li>border-left</li>
+            <li>content</li>
+            <li>height</li>
+            <li>display</li>
+        </ol>
+    </p>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Язык программирования Go (Golang)</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Язык программирования Go (Golang)</h1>
+        <nav>
+            <ul>
+                <li><a href="#history">История создания</a></li>
+                <li><a href="#overview">Краткий обзор языка</a></li>
+                <li><a href="#examples">Примеры кода</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="history">
+        <img src="go_logo_left.png" alt="Логотип Go" style="float: left; width: 25%; height: 25%" />
+        <h2>История создания</h2>
+        <p>Язык программирования Go был разработан в Google в 2007 году. Основными создателями стали Роберт Грисмер, Роб Пайк и Кен Томпсон. Он стал публично доступным в 2009 году.</p>
+        
+        <p>Go был создан как ответ на проблемы, с которыми сталкивались разработчики на языках C++ и Java. Его цель — повысить производительность разработки и сделать код проще и читаемее.</p>
+    </section>
+
+    <section id="overview">
+        <h2>Краткий обзор языка</h2>
+        <p>Go — это компилируемый язык, который поддерживает параллелизм и имеет простую синтаксис. Он предлагает мощные встроенные инструменты для разработки.</p>
+        
+        <table class="t1">
+            <thead>
+                <tr>
+                    <th>Особенность</th>
+                    <th>Описание</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Статическая типизация</td>
+                    <td>Типы определяются во время компиляции</td>
+                    <td>Высокая производительность</td>
+                </tr>
+                <tr>
+                    <td>Простота</td>
+                    <td>Простой синтаксис с минимальными правилами</td>
+                    <td>Легкость освоения</td>
+                </tr>
+                <tr>
+                    <td>Параллелизм</td>
+                    <td>Поддержка горутин и каналов</td>
+                    <td>Эффективность</td>
+                </tr>
+                <tr>
+                    <td>Кроссплатформенность</td>
+                    <td>Работает на разных ОС</td>
+                    <td>Широкий выбор</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Преимущества Go:</h3>
+        <ul>
+            <li>Высокая производительность</li>
+            <li>Простота в изучении и использовании</li>
+            <li>Кроссплатформенность</li>
+        </ul>
+
+        <h3>Недостатки Go:</h3>
+        <ul style="list-style-image: url('bullet_image.png' );">
+            <li>Отсутствие generics</li>
+            <li>Ограниченные библиотеки для некоторых задач</li>
+            <li>Сообщество меньше по сравнению с Java и Python</li>
+        </ul>
+
+        <p style="text-align: center;">
+            <img src="go_overview.png" alt="Обзор Go" style="display: inline; width: 50%; height: 50%" />
+        </p>
+    </section>
+
+    <section id="examples">
+        <h2>Примеры кода</h2>
+        <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px;">
+            <code>
+                package main
+                import "fmt"
+                func main() {
+                    fmt.Println("Hello, World!")
+                }
+            </code>
+        </pre>
+        <p>Пример выше демонстрирует простейшую программу на Go, которая выводит строку "Hello, World!"</p>
+    </section>
+
+    <footer>
+        <h3>Ссылки:</h3>
+        <ol>
+            <li><a href="https://golang.org/" target="_blank">Официальный сайт Go</a></li>
+            <li><p>Для получения дополнительной информации, <a href="https://ru.wikipedia.org/wiki/Go" target="_blank" rel="noopener noreferrer">Подробнее о языке</a>.</p></li>
+        </ol>
+        <p>Использованные теги HTML: <code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;table&gt;, &lt;th&gt;, &lt;td&gt;, &lt;tr&gt;, &lt;img&gt;, &lt;a&gt;, &lt;pre&gt;, &lt;code&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;section&gt;, &lt;footer&gt;</code></p>
+        <p>Использованные CSS-свойства: <code>font-size, margin, padding, color, background-color, text-align, font-family, display, float, border, border-radius, list-style-type, list-style-image, text-decoration, width, height, box-shadow, transition, opacity, z-index, position, overflow, cursor, flex, flex-direction, justify-content, align-items, grid, grid-template-columns, grid-template-rows, align-self, padding-top, padding-bottom, padding-right, padding-left, margin-top, margin-bottom, margin-right, margin-left</code></p>
+    </footer>
+
+</body>
+</html>
