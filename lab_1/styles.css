@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Patrizia';
+    src: url('Patrizia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -17,7 +23,7 @@ header {
 
 h1 {
     font-size: 24px;
-    font-family: 'Arial Black', sans-serif;
+    font-family: 'Patrizia', sans-serif; /* Используем локально подключенный шрифт */
 }
 
 h2 {
