@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="lab_5.1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Компьютер угадывает число</h1>
+        <div class="form-group">
+            <label for="user-number">Задумайте число от 1 до 100:</label>
+            <input type="number" id="user-number" min="1" max="100" placeholder="Введите ваше число" />
+            <button onclick="startGame()">Начать игру</button>
+        </div>
+        
+        <div id="game" class="hidden">
+            <h2>Компьютер предполагает число: <span id="current-guess"></span></h2>
+            <div class="button-group">
+                <button onclick="giveFeedback('too-low')">Больше</button>
+                <button onclick="giveFeedback('too-high')">Меньше</button>
+                <button onclick="giveFeedback('correct')">Правильно!</button>
+            </div>
+            <h3>Все попытки компьютера:</h3>
+            <table id="attempts-table">
+                <thead>
+                    <tr>
+                        <th>Попытка</th>
+                    </tr>
+                </thead>
+                <tbody id="attempts-body">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="end-message" class="hidden">
+            <h2>Поздравляем! Компьютер угадал ваше число!</h2>
+            <button onclick="resetGame()">Начать новую игру</button>
+        </div>
+    </div>
+    
+    <script src="lab_5.1.js"></script>
+</body>
+</html>
