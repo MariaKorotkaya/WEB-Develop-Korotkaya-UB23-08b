@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заявки на кредит</title>
+    <link rel="stylesheet" href="lab_6.css">
+    <style>
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0ffe0;
+            border: 1px solid #b0e0b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Заявка на кредит</h1>
+        <form class="credit-application" id="credit-form">
+            <div class="form-group">
+                <label for="full-name">ФИО:</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Введите ваше ФИО">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Введите номер телефона">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required placeholder="Введите вашу почту">
+            </div>
+
+            <div class="form-group">
+                <label for="passport">Паспортные данные:</label>
+                <input type="text" id="passport" name="passport" required placeholder="Введите номер паспорта">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Дата рождения:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loan-purpose">Цель кредита:</label>
+                <input type="text" id="loan-purpose" name="loan-purpose" required placeholder="Например, покупка квартиры">
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Сумма кредита:</label>
+                <input type="number" id="amount" name="amount" required placeholder="Введите сумму кредита" step="10000">
+            </div>
+
+            <div class="form-group">
+                <label for="term">Срок кредита:</label>
+                <select id="term" name="term" required>
+                    <option value="">Выберите срок</option>
+                    <option value="12">12 месяцев</option>
+                    
+                    <option value="24">24 месяца</option>
+                    <option value="36">36 месяцев</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="income">Ежемесячный доход:</label>
+                <input type="number" id="income" name="income" required placeholder="Введите ваш доход" step="10000">
+            </div>
+
+            <div class="form-group">
+                <label for="agreement">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    Я согласен с условиями
+                </label>
+            </div>
+
+            <button type="submit">Отправить заявку</button>
+        </form>
+
+        <div class="output" id="output" style="display: none;"></div>
+
+        <!-- Всплывающее окно для проверки данных -->
+        <div id="checkModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Проверьте ваши данные</h2>
+                <p id="checkText"></p>
+                <!-- Кнопки "Подтвердить" и "Изменить" добавляются в модальное окно -->
+                <button id="confirmButton">Подтвердить</button>
+                <button id="editButton">Изменить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab_6.js"></script>
+</body>
+</html>
