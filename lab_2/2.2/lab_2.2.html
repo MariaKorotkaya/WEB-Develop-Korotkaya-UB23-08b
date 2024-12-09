@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная страница</title>
+    <link rel="stylesheet" href="lab_2.2.css">
+</head>
+<body>
+    <div class="buttons">
+        <button class="resize-btn" onclick="setSize(320)">320px</button>
+        <button class="resize-btn" onclick="setSize(768)">768px</button>
+        <button class="resize-btn" onclick="setSize(1200)">1200px</button>
+    </div>
+    
+    <div class="container" id="flex-container">
+        <!-- 1-я строка -->
+        <div class="row-1">
+            <div class="box box-1">Блок 1</div>
+            <div class="box box-2">Блок 2</div>
+            <div class="box box-3">Блок 3</div>
+            <div class="box box-4">Блок 4</div>
+        </div>
+
+        <!-- 2-я строка -->
+        <div class="row-2">
+            <div class="column-1">
+                <div class="box box-5">Блок 5</div>
+                <div class="box box-6">Блок 6</div>
+            </div>
+            <div class="box box-7">Блок 7</div>
+        </div>
+
+        <!-- 3-я строка -->
+        <div class="row-3">
+            <!-- Первая колонка -->
+            <div class="column-2">
+                <div class="box box-8">Блок 8</div>
+                <div class="box box-9">Блок 9</div>
+            </div>
+
+            <!-- Вторая колонка -->
+            <div class="column-3">
+                <div class="box box-10">Блок 10</div>
+                <div class="row-3-inner">
+                    <div class="box box-11">Блок 11</div>
+                    <div class="box box-12">Блок 12</div>
+                </div>
+            </div>
+
+            <!-- Третья колонка -->
+            <div class="column-4">
+                <div class="row-3-inner">
+                    <div class="box box-13">Блок 13</div>
+                    <div class="box box-14">Блок 14</div>
+                </div>
+                <div class="box box-15">Блок 15</div>
+            </div>
+        </div>
+
+        <!-- 4-я строка -->
+        <div class="row-4">
+            <div class="box box-16">Блок 16</div>
+            <div class="box box-17">Блок 17</div>
+        </div>
+
+        <!-- 5-я строка -->
+        <div class="row-5">
+            <div class="row-5">
+                <div class="box box-18">Блок 18</div>
+                <div class="box box-19">Блок 19</div>
+                <div class="row-5-column-3">
+                    <div class="row-3-inner">
+                        <div class="box box-20">Блок 20</div>
+                        <div class="box box-21">Блок 21</div>
+                    </div>
+                    <div class="box box-22">Блок 22</div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function setSize(width) {
+                document.body.style.width = width + 'px';
+                window.dispatchEvent(new Event('resize')); // Вызываем событие изменения размера окна
+            }
+    
+            // Устанавливаем ширину по умолчанию при загрузке страницы
+            window.onload = function() {
+                setSize(1200);
+            }
+        </script>
+    </body>
+</html>

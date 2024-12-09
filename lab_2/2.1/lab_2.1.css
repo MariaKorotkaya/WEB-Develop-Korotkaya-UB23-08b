@@ -1,0 +1,46 @@
+@media only screen and (min-width: 768px) {
+    body {
+        height: 100vh; /* Высота экрана */
+        display: flex; /* Flexbox для центрирования */
+        justify-content: center; /* Центрирование по горизонтали */
+        align-items: center; /* Центрирование по вертикали */
+        background-color: #f5f5dc; /* Цвет фона */
+    }
+
+    .shell {
+        display: flex; /* Flexbox для горизонтального размещения цифр */
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        flex-direction: row;
+    }
+
+    .num1,
+    .num2 {
+        display: flex; /* Флекс для размещения блоков в числах */
+        height: 100%;
+        justify-content: center; /* Центрирование блоков внутри чисел */
+        flex-direction: column; /* Вертикальная ориентация для формирования цифр */
+    }
+
+    .top {
+        justify-content: space-around; /* Равное пространство между блоками */
+        width: 100%; /* Ширина блока */
+        display: flex; /* Flexbox для размещения блоков */
+
+        align-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    .p, .np {
+        width: 100px; /* Ширина квадратов */
+        height: 100px; /* Высота квадратов */
+        display: block; /* Блоковый элемент */
+        background-color: #8B4513; /* Цвет заполнения */
+    }
+
+    .np {
+        background-color: #f5f5dc; /* Цвет для отсутствующих блоков */
+    }
+}

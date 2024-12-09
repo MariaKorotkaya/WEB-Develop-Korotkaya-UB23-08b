@@ -1,0 +1,123 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px;
+}
+
+.resize-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.resize-btn:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Начальная ширина для 1200px */
+    margin: auto;
+}
+
+.row-1, .row-2, .row-3, .row-4, .row-5 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Общие стили для блоков */
+.box {
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для блоков */
+.box-1 { background-color: #CD5C5C; flex: 1 1 18%; min-width: 120px; }
+.box-2 { background-color: #DC143C; flex: 1 1 18%; min-width: 120px; }
+.box-3 { background-color: #8B0000; flex: 1 1 18%; min-width: 120px; }
+.box-4 { background-color: #FF0000; flex: 1 1 18%; min-width: 120px; }
+
+/* Стили для 2-й строки */
+.column-1 { display: flex; flex-direction: column; flex: 1; }
+
+/* Уменьшаем размер блоков 5 и 6 в 1.5 раза, увеличиваем блок 7 */
+.box-5 { background-color: #FFC0CB; flex: 1 1 10%; }  /* 1.5 раза меньше */
+.box-6 { background-color: #FF69B4; flex: 1 1 10%; }  /* 1.5 раза меньше */
+.box-7 { background-color: #C71585; flex: 1 1 30%; min-width: 200px; }  /* Увеличиваем блок 7 */
+
+/* Стили для 3-й строки */
+.column-2, .column-3, .column-4 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.box-8 { background-color: #ADFF2F; flex: 1; }
+.box-9 { background-color: #00FF00; flex: 1; }
+
+/* Изменяем стиль блока 10, увеличиваем высоту */
+.box-10 { background-color: #32CD32; flex: 1 1 50%; min-height: 200px; }  /* Увеличиваем высоту блока 10 */
+
+/* Уменьшаем размеры блоков 11 и 12 в 2 раза, чтобы они находились в одной линии */
+.row-3-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box-11 { background-color: #00FA9A; flex: 1 1 22%; min-width: 120px; }  /* Уменьшаем длину блока 11 */
+.box-12 { background-color: #2E8B57; flex: 1 1 22%; min-width: 120px; }  /* Уменьшаем длину блока 12 */
+
+/* Стили для блоков 13, 14, 15 */
+.box-13 { background-color: #006400; flex: 1 1 22%; min-width: 120px; }  /* Так же, как у блоков 11 и 12 */
+.box-14 { background-color: #9ACD32; flex: 1 1 22%; min-width: 120px; }  /* Так же, как у блоков 11 и 12 */
+.box-15 { background-color: #808000; flex: 1 1 50%; min-height: 200px; }  /* Так же, как блок 10 */
+
+/* Стили для 4-й строки */
+.box-16 { background-color: #FFA07A; flex: 1 1 40%; min-width: 120px; }  /* Уменьшаем длину блока 16 */
+.box-17 { background-color: #FF4500; flex: 1 1 40%; min-width: 120px; }  /* Уменьшаем длину блока 17 */
+
+/* Стили для 5-й строки */
+.box-18 { background-color: #BC8F8F; flex: 1; }
+.box-19 { background-color: #F4A460; flex: 1; }
+.row-5-column-3 { display: flex; flex-direction: column; flex: 1; }
+
+/* Стили для блоков 20, 21, 22 */
+.box-20 { background-color: #D2691E; flex: 1 1 48%; }
+.box-21 { background-color: #8B4513; flex: 1 1 48%; }
+.box-22 { background-color: #A52A2A; flex: 1 1 100%; }
+
+/* Адаптивные стили для меньших экранов */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 48%; /* Каждый блок займет 48% ширины */
+    }
+}
+
+@media (max-width: 320px) {
+    .box {
+        flex: 1 1 100%; /* Каждый блок займет 100% ширины */
+    }
+}
