@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="lab_8.2.css"> 
+</head>
+<body>
+
+<h2>Календарь</h2>
+<div>
+    <label for="year">Год:</label>
+    <input type="number" id="year" value="" placeholder="Введите год">
+    <label for="month">Месяц:</label>
+    <input type="number" id="month" value="" placeholder="Введите месяц">
+    <button onclick="generateCalendar()">Показать календарь</button>
+</div>
+
+<div id="calendar"></div>
+
+<script>
+    function generateCalendar() {
+        const calendarDiv = document.getElementById('calendar');
+        const yearInput = document.getElementById('year');
+        const monthInput = document.getElementById('month');
+        
+        // Если параметры не заданы, берем текущие год и месяц
+        const currentDate = new Date();
+        const year = yearInput.value ? parseInt(yearInput.value) : currentDate.getFullYear();
+        const month = monthInput.value ? parseInt(monthInput.value) - 1 : currentDate.getMonth(); // Месяцы в JavaScript начинаются с 0
+
+        // Определяем количество дней в месяце
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Находим первый день месяца
+        const firstDay = new Date(year, month, 1).getDay();
+
+        // Праздничные дни (пример)
+        const holidays = [
+            new Date(year, 0, 1),    // Новый год (1 января)
+            new Date(year, 0, 7),    // Рождество Христово (7 января)
+            new Date(year, 1, 23),   // День защитника Отечества (23 февраля)
+            new Date(year, 2, 8),    // Международный женский день (8 марта)
+            new Date(year, 4, 1),    // 1 мая (День труда)
+            new Date(year, 4, 9),    // День Победы (9 мая)
+            new Date(year, 5, 12),   // День России (12 июня)
+            new Date(year, 8, 1),    // День знаний (1 сентября)
+            new Date(year, 9, 4),    // День народного единства (4 ноября)
+            new Date(year, 11, 31)    // Новый год (31 декабря)
+        ];
+
+        // Создаем таблицу календаря
+        let calendarHtml = '<table>';
+        calendarHtml += '<thead><tr>';
+        calendarHtml += '<th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>';
+        calendarHtml += '</tr></thead><tbody><tr>';
+
+        // Пустые ячейки до первого дня месяца
+        for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
+            calendarHtml += '<td></td>';
+        }
+
+        // Заполнение дней месяца
+        
+        for (let day = 1; day <= daysInMonth; day++) {
+            let currentDate = new Date(year, month, day);
+            let weekendClass = (currentDate.getDay() === 0 || currentDate.getDay() === 6) ? 'weekend' : '';
+            let holidayClass = holidays.some(holiday => holiday.getDate() === currentDate.getDate() &&
+                                                       holiday.getMonth() === currentDate.getMonth() &&
+                                                       holiday.getFullYear() === currentDate.getFullYear()) ? 'holiday' : '';
+
+            calendarHtml += `<td class="${weekendClass} ${holidayClass}">${day}</td>`;
+
+            // Если это воскресенье (последний день недели), начинаем новую строку
+            if (currentDate.getDay() === 0) {
+                calendarHtml += '</tr><tr>';
+            }
+        }
+
+        // Закрываем таблицу
+        calendarHtml += '</tr></tbody></table>';
+        
+        // Выводим календарь
+        calendarDiv.innerHTML = calendarHtml;
+    }
+
+    // По умолчанию вызываем функцию для текущего месяца
+    generateCalendar();
+</script>
+
+<div>
+    <a class="button" href="lab_8.html">Назад</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    width: 14.28%;
+    border: 1px solid #a58c6b; 
+}
+
+th {
+    background-color: #d8cfa8; 
+}
+
+.weekend {
+    background-color: #f57171; 
+    color: white; 
+}
+
+.holiday {
+    background-color: #ffe089; 
+    color: #5a3e29; 
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #d2b48c; 
+    color: #5c3a20; 
+    text-decoration: none;
+    border: 1px solid #8B4513; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    text-align: center; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.button:hover {
+    background-color: #ffe4c4; 
+    color: #3b2a16; 
+}
