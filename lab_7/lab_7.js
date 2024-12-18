@@ -1,59 +1,64 @@
 let display = document.getElementById('display');
 let currentInput = '';
+let lastInputWasOperator = false;
 
+// Функция для добавления числа или десятичной точки
 function appendNumber(number) {
+    // Если это точка, проверим, не была ли она уже добавлена
+    if (number === '.' && currentInput.includes('.')) return;
+
+    // Если после оператора идет точка, это недопустимо
+    if (lastInputWasOperator && number === '.') return;
+
     currentInput += number.toString();
     updateDisplay();
+    lastInputWasOperator = false;
 }
 
+// Функция для добавления оператора
 function appendOperator(operator) {
-    if (currentInput === '') return;
+    if (currentInput === '' || lastInputWasOperator) return; // Запрещаем операторы в начале или после оператора
     currentInput += ` ${operator} `;
     updateDisplay();
+    lastInputWasOperator = true;
 }
 
+// Очистка дисплея
 function clearDisplay() {
     currentInput = '';
     updateDisplay();
 }
 
+// Очистка последнего введенного символа
 function clearLast() {
     currentInput = currentInput.slice(0, -1);
     updateDisplay();
+    lastInputWasOperator = false; // После удаления символа не может быть оператора
 }
 
-function changeSign() {
-    if (currentInput === '') return;
-    currentInput =
-    (parseFloat(currentInput) * -1).toString();
-    updateDisplay();
-}
-
-function calculateSqrt() {
-    if (currentInput === '') return;
-    const result = Math.sqrt(parseFloat(currentInput));
-    currentInput = result.toString();
-    updateDisplay();
-}
-
-function calculateInverse() {
-    if (currentInput === '') return;
-    const result = 1 / parseFloat(currentInput);
-    currentInput = result.toString();
-    updateDisplay();
-}
-
+// Вычисление результата
 function calculateResult() {
     if (currentInput === '') return;
+
     try {
-        currentInput = eval(currentInput.replace(/%/g, '/100')).toString();
-        updateDisplay();
-    } catch {
-        currentInput = 'Ошибка';
-        updateDisplay();
+        // Заменяем проценты на деление на 100 для корректных вычислений
+        currentInput = currentInput.replace(/%/g, '/100');
+        
+        // Проверка на деление на ноль
+        if (currentInput.includes('/ 0') || currentInput.includes('* Infinity') || currentInput.includes('/ Infinity')) {
+            currentInput = 'Ошибка'; // Деление на 0 или бесконечность
+        } else {
+            // Вычисление с помощью eval
+            currentInput = eval(currentInput).toString();
+        }
+    } catch (error) {
+        currentInput = 'Ошибка'; // Если выражение некорректно
     }
+    updateDisplay();
+    lastInputWasOperator = false;
 }
 
+// Обновление дисплея
 function updateDisplay() {
     display.value = currentInput;
 }

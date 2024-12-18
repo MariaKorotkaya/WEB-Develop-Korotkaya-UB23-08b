@@ -1,68 +1,117 @@
+/* Сброс отступов и внутренних отступов для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили для тела страницы */
 body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    color: #333;
 }
 
+/* Основной контейнер калькулятора */
 .calculator {
-    background-color: #007BFF; 
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
 }
 
-#display {
+/* Дисплей калькулятора */
+.display {
     width: 100%;
-    height: 40px;
-    font-size: 24px;
+    height: 50px;
+    font-size: 32px;
     text-align: right;
-    margin-bottom: 10px;
-    background-color: #A9A9A9; 
-    border: none;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: bold;
 }
 
+/* Сетка кнопок */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 10px;
 }
 
+/* Общий стиль для кнопок */
 button {
-    height: 50px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px; 
+    font-size: 24px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f2f2f2;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+}
+
+
+button:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(11)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(14)):not(:nth-child(15)):not(:nth-child(16)):not(:nth-child(17)):not(:nth-child(18)):not(:nth-child(19)) {
+    background-color: #e0e0e0; 
 }
 
 button:hover {
-    background-color: #0094FF;
+    background-color: #e0e0e0;
 }
 
-.clear {
-    background-color: #FF4C4C; /
-    color: white;
-}
-
-.clear:hover {
-    background-color: #FF0000; 
-}
-
-.operator {
-    background-color: #00BFFF; 
-    color: white;
-}
-
-.equals {
-    background-color: #228B22; 
-    color: white;
-}
 
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.98);
+}
+
+
+button:nth-child(1) {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+
+button:nth-child(2) {
+    background-color: #fe9241;
+    color: white;
+}
+
+
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(7),
+button:nth-child(8),
+button:nth-child(11),
+button:nth-child(12),
+button:nth-child(15),
+button:nth-child(16) {
+    background-color: #fe9241; 
+    color: white;
+}
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 360px) {
+    .calculator {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 18px;
+    }
 }
