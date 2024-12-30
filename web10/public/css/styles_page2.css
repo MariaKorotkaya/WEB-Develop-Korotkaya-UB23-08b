@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* Темно-серый фон */
+    color: white; /* Цвет текста */
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #424242;
+    padding: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.sidebar a:hover {
+    background-color: #D5006D; /* Розовый цвет при наведении */
+}
+
+.profile-button {
+    background-color: #8e24aa; /* Фиолетовый цвет для кнопки "Профиль" */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center; /* Центрируем текст */
+    margin-top: 10px; /* Отступ сверху */
+    display: block; /* Делаем кнопку блочной */
+}
+
+.profile-button:hover {
+    background-color: #7b1fa2; /* Темнее фиолетовый цвет при наведении */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    padding: 10px;
+    background-color: #6a1b9a; /* Фиолетовый цвет */
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-button {
+    background-color: #8e24aa; /* Фиолетовый цвет кнопки */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-left: auto; /* Сдвигаем кнопку вправо */
+}
+
+.admin-button:hover {
+    background-color: #7b1fa2; /* Темнее фиолетовый цвет при наведении */
+}
+
+.interactive-window {
+    background-color: #424242; /* Цвет фона интерактивного окна */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    height: 100%; /* Высота окна */
+    overflow-y: auto; /* Прокрутка по вертикали */
+}

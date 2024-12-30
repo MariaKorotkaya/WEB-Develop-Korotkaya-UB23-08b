@@ -1,0 +1,79 @@
+/* Общие стили */
+html, body {
+    height: 100%; /* Устанавливаем высоту на 100% */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы */
+    font-family: 'Arial', sans-serif;
+    background-color: #212121; /* Темно-серый фон */
+    color: #fff; /* Белый текст */
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    height: 100%; /* Высота на весь экран */
+    width: 100%; /* Ширина на весь экран */
+}
+
+/* Левая панель */
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #424242; /* Темно-серый фон */
+    display: flex;
+    flex-direction: column; /* Вертикальная компоновка */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+}
+
+/* Правая панель */
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    background-color: #424242; /* Темно-серый фон */
+}
+
+/* Заголовки */
+h1 {
+    color: #D5006D; /* Розовый цвет */
+    font-size: 48px;
+    text-transform: uppercase; /* Заглавные буквы */
+    margin-top: 0;
+}
+
+/* Параграфы */
+p {
+    line-height: 1.6;
+}
+
+/* Картинки */
+.jdm-image {
+    width: 600px; /* Увеличенная ширина изображений */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    background-color: #D5006D; /* Розовая кнопка */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Отступ между кнопками */
+}
+
+.button:hover {
+    background-color: #C51162; /* Темнее при наведении */
+}
+
+/* Разделительные линии */
+hr {
+    border: 1px solid #D5006D; /* Розовая линия */
+    margin: 20px 0;
+}

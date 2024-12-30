@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c; /* Темно-серый фон */
+    color: #fff; /* Белый текст */
+}
+
+header {
+    background: #6a0dad; /* Фиолетовый фон */
+    color: #fff; /* Белый текст */
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ff69b4; /* Розовый текст */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #3c3c3c; /* Темно-серый фон для секций */
+    color: #fff; /* Белый текст */
+    border-radius: 5px;
+}
+
+h2, h3 {
+    color: #ff69b4; /* Розовый текст для заголовков */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #6a0dad; /* Фиолетовый фон */
+    color: #fff; /* Белый текст */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.catalog {
+    margin-top: 20px;
+}
+
+.catalog a {
+    color: #ff69b4; /* Розовый текст для ссылок */
+    text-decoration: none;
+}
+
+.catalog a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
